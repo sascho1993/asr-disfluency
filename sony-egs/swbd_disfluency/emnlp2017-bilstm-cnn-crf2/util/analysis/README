@@ -1,0 +1,4 @@
+The scripts and files in this directory can be used to analyse the distribution of OOVs in the dialogAct Switchboard corpus.
+Words are makred as OOV if they do not occur in the Komninos embeddings.
+The script count_one_word_rep.py can be used to find all one-word-repetitions (e.g. [ the + the ]) and all disfluencies contained in total.
+Both one-wprd-repetitions and OOVs can be used as 'stupid baselines' for disfluency detection systems.
