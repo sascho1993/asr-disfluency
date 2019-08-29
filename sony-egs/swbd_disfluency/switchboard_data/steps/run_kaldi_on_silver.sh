@@ -1,4 +1,7 @@
-cd /speech/dbwork/mul/spielwiese4/students/deschops/asr-disfluency/sony-egs/swbd_disfluency/switchboard_data
+silver_dir=data/silver_wd
+
+# Split words (e.g. it's -> it 's) and invent time stamps
+python add_timestamps_for_kaldi.py $silver_dir/reverse_comparison_out audio/helpers/discarded_utts > $silver_dir/ms_silver_for_kaldi
 
 # Generate Kaldi files in KALDI_DIR/data/disfluency_silver_uttid
 python utils/prepare_data_for_kaldi.py
@@ -24,8 +27,8 @@ mv data/disfluency_silver_uttid/segments data/disfluency_silver_uttid/segments_b
 
 cat data/disfluency_silver_uttid/segments_bak | awk '$3!=$4 {print}' > data/disfluency_silver_uttid/segments 
 
-# Decode on silver data
-steps/decode_fmllr.sh --nj 30 --cmd "$decode_cmd" --config conf/decode.config exp/tri4/graph_sw1_tg data/disfluency_silver_uttid exp/tri4/decode_disfluency_silver_sw1_tg
+# Decode silver data
+steps/decode_fmllr.sh --nj 30 --cmd "$decode_cmd" --config conf/decode.config exp/chain/tdnn7q_sp/graph_sw1_tg data/disfluency_silver_uttid exp/chain/tdnn7q_sp/decode_disfluency_silver_sw1_tg
 
 # Generate Disfluency labels for Kaldi output based on time overlap with silver disfluency labels
 sh utils/get_kaldi_disfluency_labels_time_based.sh

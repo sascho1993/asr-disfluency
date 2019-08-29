@@ -11,7 +11,7 @@ sh utils/prepare_formant_files.sh
 
 
 # Prepare duration features based on fluent words only (no RM, no RR, no non-lexical conversational fillers)
-
+#
 # Kaldi directory in which alignments are generated
 mkdir /speech/dbwork/mul/spielwiese4/students/deschops/asr-disfluency/sony-egs/swbd/s5c_split/data/disfluency_fluent_words
 
@@ -29,11 +29,16 @@ sh get_kaldi_phone_durations_fluent.sh
 python utils/get_duration_features.py audio/duration_feats/kaldi_ali_phones_only_fluent > data/silver_wd/ms_silver_durations_fluent_words
 
 
-==================================================================================================================
-============= Not used ===========================================================================================
-==================================================================================================================
-# Get phone durations with Kaldi from laignment file (for all speech, also disfluent and filler words)
+
+==================================================================================================
+============ duration feature based on all MS-State words ========================================
+==================================================================================================
+
+# Get phone durations from kaldi alignment file
 sh utils/get_kaldi_phone_durations.sh
+
+# Get word durations of MS-State transcripts (all files, not only PennTreebank portion)
+sh utils/prepare_all_ms_words.sh audio/duration_feats
 
 # Creates new version of silver transcripts: ms_silver_with_durations
 python utils/get_duration_features.py audio/duration_feats/kaldi_ali_phones > data/silver_wd/ms_silver_with_durations

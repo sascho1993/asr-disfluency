@@ -18,7 +18,6 @@ wav_scp = open("/speech/dbwork/mul/spielwiese4/students/deschops/asr-disfluency/
 text = open("/speech/dbwork/mul/spielwiese4/students/deschops/asr-disfluency/sony-egs/swbd/s5c_split/data/disfluency_fluent_words/text", 'w')
 wav_scp_out = open("/speech/dbwork/mul/spielwiese4/students/deschops/asr-disfluency/sony-egs/swbd/s5c_split/data/disfluency_fluent_words/wav.scp", 'w')
 utt2spk = open("/speech/dbwork/mul/spielwiese4/students/deschops/asr-disfluency/sony-egs/swbd/s5c_split/data/disfluency_fluent_words/utt2spk", 'w')
-spk2utt = open("/speech/dbwork/mul/spielwiese4/students/deschops/asr-disfluency/sony-egs/swbd/s5c_split/data/disfluency_fluent_words/spk2utt", 'w')
 segments = open("/speech/dbwork/mul/spielwiese4/students/deschops/asr-disfluency/sony-egs/swbd/s5c_split/data/disfluency_fluent_words/segments", 'w')
 
 
@@ -41,15 +40,6 @@ for line in silver:
             if file_number not in files:
                 files.append(file_number)
         if int(file_number) < 4000 or int(file_number)> 4200 and end != start:
-            # No new line at beginning of file
-            if prev_file == "":
-                spk2utt.write(f + " " + "sw0"+file_number+"-"+speaker_side+"_"+start+"-"+end)
-            # Add utterance to line
-            elif prev_file == f:
-                spk2utt.write(" sw0"+file_number+"-"+speaker_side+"_"+start+"-"+end)
-            # add new line before new speaker
-            else:
-                spk2utt.write("\n" + f + " " + "sw0"+file_number+"-"+speaker_side+"_"+start+"-"+end)
             prev_file = f
     except:
         pass

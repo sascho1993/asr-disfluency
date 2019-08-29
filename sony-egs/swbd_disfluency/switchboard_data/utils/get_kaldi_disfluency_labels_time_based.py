@@ -38,6 +38,7 @@ for line in silver_file:
         #    disfluency = 'FIL_C'
         if prev_end != None and prev_disfluency != None:
             pause_len = start - prev_end
+            # pause disfluency labels are a combination of last and next disfluency label, e.g. BE_IP-C
             if prev_disfluency != disfluency:
                 pause_disfl = prev_disfluency + "-" + disfluency
             else:

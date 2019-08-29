@@ -29,18 +29,12 @@ for line in discarded:
         discard_utts.append(line.strip())
 
 
-utts = []
 sentence = ""
 new_utt = True
-speaker = {}
 files = []
-prev_file_id = ""
 for line in silver:
     try:
         utt_id, file_id, token, disfluency, start, end = line.split()
-        if prev_file_id != file_id:
-            file_id_count = 1
-        prev_file_id = file_id
         end = end.strip()
         if new_utt == True:
             utt_start = start
@@ -49,6 +43,7 @@ for line in silver:
             sentence += token + " "
         if file_id not in files:
             files.append(file_id[2:6])
+    # end of utterance: write Kaldi files
     except:
         if utt_start != end:
             new_utt = True
@@ -58,7 +53,6 @@ for line in silver:
                 utt_id = utt_id + "-b-" + utt_start + "-" + end
             else:
                 print("speaker side must be A or B")
-            utts.append([utt_id, sentence.strip()])
             utt2spk.write(utt_id + " " + file_id + '\n')
             text.write(utt_id + " " + sentence + '\n')
             segments.write(utt_id + " " + file_id + " " + str(float(utt_start)/100) + " " + str(float(end)/100) + '\n')

@@ -1,8 +1,6 @@
-
-
-
-
-
+"""
+Does the same as other add_timestamp*.py scripts, but time stamps are of length 6: e.g. 000080
+"""
 
 import sys
 from math import trunc, ceil
