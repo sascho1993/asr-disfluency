@@ -1,0 +1,26 @@
+add_timestamps_apostrophe.py			run_data_prep_silver
+add_timestamps_apostrophe_for_cut_files.py	run_data_prep_silver
+add_timestamps_for_kaldi.py				Same as above, but time stamps are of length 6: e.g. 000080
+clean_data.sh					run_data_prep_dialogAct
+compare_silver_ms.py				run_data_prep_silver
+cut_audio_silver.sh				run_data_prep_silver
+data_preprocessing_dialogAct.sh			run_data_prep_dialogAct
+discarded_utts.sh				run_data_prep_silver
+duration_feature_analysis.py				Histograms of word_dur_phone and word_dur_word
+get_a_b_swap.py					run_data_prep_silver
+get_duration_features.py			run_prosod_extraction
+get_duration_fluent_speech.py			run_prosod_extraction
+get_kaldi_disfluency_labels_time_based.py	run_kaldi_on_silver
+get_kaldi_disfluency_labels_time_based.sh	run_kaldi_on_silver
+get_kaldi_phone_durations.sh			run_prosod_extraction
+get_silver_word_list.py				run_data_prep_silver
+make_fbank_feats.sh				run_prosod_extraction
+make_pitch_feats.sh				run_prosod_extraction
+max_dur.py						Find the longest word, used for zero padding
+prepare_ms_words.sh				run_prosod_extraction
+prepare_data_BIO.py				run_data_prep_dialogAct
+prepare_data_for_kaldi.py			run_kaldi_on_silver
+prepare_formant_files.sh			run_prosod_extraction
+prepare_ms_words.sh				run_data_prep_silver
+reverse_comparison_ms_silver.py			run_data_prep_silver
+trim_switchboard_data.py			run_data_prep_silver

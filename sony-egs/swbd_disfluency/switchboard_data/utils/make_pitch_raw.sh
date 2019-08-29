@@ -1,0 +1,1 @@
+compute-kaldi-pitch-feats --sample-frequency=8000 scp:/speech/dbwork/mul/spielwiese4/students/deschops/asr-disfluency/sony-egs/swbd_disfluency/switchboard_data/audio/helpers/wav.scp ark,t:/speech/dbwork/mul/spielwiese4/students/deschops/asr-disfluency/sony-egs/swbd_disfluency/switchboard_data/audio/F0/raw_pitch
