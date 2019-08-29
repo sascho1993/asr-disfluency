@@ -1,0 +1,20 @@
+==================================================================================================
+results/exp_word_duration/disfluency_duration_ftokens,pos,word_dur_phone,word_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed6257_0.8193_0.8142_23.h5_dev
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  4661
+fn:  1295
+fp:  460
+precision:  0.910173794180824
+recall:  0.7825721961047682
+F1:  0.841563600252776
+==================================================================================================
+results/exp_word_duration/disfluency_duration_ftokens,pos,word_dur_phone,word_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed7687_0.7113_0.6816_1.h5_dev
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  3704
+fn:  2252
+fp:  269
+precision:  0.9322929775987918
+recall:  0.6218938885157824
+F1:  0.7460972907644273

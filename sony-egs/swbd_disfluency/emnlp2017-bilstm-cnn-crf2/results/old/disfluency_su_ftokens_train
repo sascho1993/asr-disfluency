@@ -1,0 +1,152 @@
+results/disfluency_su_ftokens_lstm1014,1024_dropout0.25,0.25_seed8191_0.7907_0.7653_7.h5_train
+precision:  0.9586976803023355
+recall:  0.9188578876377249
+F1:  0.9383551043149879
+
+results/disfluency_su_ftokens_lstm1014,1024_dropout0.25_seed8191_0.7823_0.7512_3.h5_train
+precision:  0.9219841804703295
+recall:  0.7878847581952927
+F1:  0.8496759800276212
+
+results/disfluency_su_ftokens_lstm1014_dropout0.25_seed8191_0.7535_0.7279_8.h5_train
+precision:  0.9794476657862244
+recall:  0.949759786611703
+F1:  0.964375298154902
+
+results/disfluency_su_ftokens_lstm1024_dropout0.25,0.25_seed8191_0.7786_0.7394_8.h5_train
+precision:  0.9662415486218959
+recall:  0.933498022217844
+F1:  0.9495876050258228
+
+results/disfluency_su_ftokens_lstm150,150,150,150_dropout0.25,0.25_seed8191_0.8064_0.7847_12.h5_train
+precision:  0.922458111195735
+recall:  0.8810905839382871
+F1:  0.901299929461192
+
+results/disfluency_su_ftokens_lstm150,150,150,150_dropout0.25_seed8191_0.7902_0.7681_8.h5_train
+precision:  0.9419125826081267
+recall:  0.8726641710743677
+F1:  0.9059670377217481
+
+results/disfluency_su_ftokens_lstm150,150,150_dropout0.25,0.25_seed8191_0.8048_0.7739_12.h5_train
+precision:  0.944454478285855
+recall:  0.8717700013639877
+F1:  0.9066578399848686
+
+results/disfluency_su_ftokens_lstm150,150,150_dropout0.25,0.5_seed8191_0.8095_0.7862_19.h5_train
+precision:  0.9374676584734799
+recall:  0.8786050952518073
+F1:  0.907082449950322
+
+results/disfluency_su_ftokens_lstm150,150,150_dropout0.25_seed8191_0.7856_0.7631_7.h5_train
+precision:  0.9475611616906566
+recall:  0.8470363578497492
+F1:  0.8944832994574524
+
+results/disfluency_su_ftokens_lstm150,150,150_dropout0.5,0.25_seed8191_0.8071_0.7876_22.h5_train
+precision:  0.9032680171599887
+recall:  0.8264704545110104
+F1:  0.863164392668334
+
+results/disfluency_su_ftokens_lstm150,150,150_dropout0.5,0.5_seed8191_0.8058_0.7809_14.h5_train
+precision:  0.8963710730136628
+recall:  0.7805192246487732
+F1:  0.8344432022553833
+
+results/disfluency_su_ftokens_lstm150,150,150_dropout0.5_seed8191_0.7841_0.7556_8.h5_train
+precision:  0.9223292836196062
+recall:  0.8341542518527499
+F1:  0.8760285855257923
+
+results/disfluency_su_ftokens_lstm150,150_dropout0.25,0.25_seed8191_0.8017_0.7741_14.h5_train
+precision:  0.9330296630205214
+recall:  0.8971553278874862
+F1:  0.9147409004164444
+
+results/disfluency_su_ftokens_lstm150,150_dropout0.25,0.5_seed8191_0.8064_0.7821_12.h5_train
+precision:  0.9233312736928241
+recall:  0.8379431065577497
+F1:  0.8785673425284434
+
+results/disfluency_su_ftokens_lstm150,150_dropout0.25_seed8191_0.7721_0.7352_12.h5_train
+precision:  0.9735106848338545
+recall:  0.9106588060561054
+F1:  0.9410364430801998
+
+results/disfluency_su_ftokens_lstm150,150_dropout0.5,0.25_seed8191_0.8011_0.7766_14.h5_train
+precision:  0.8722444970452313
+recall:  0.8209538820605308
+F1:  0.8458223381165779
+
+results/disfluency_su_ftokens_lstm150,150_dropout0.5,0.5_seed8191_0.8019_0.7807_24.h5_train
+precision:  0.9055836163353962
+recall:  0.7961444614521922
+F1:  0.8473449899993547
+
+results/disfluency_su_ftokens_lstm150,150_dropout0.5_seed8191_0.7763_0.7542_8.h5_train
+precision:  0.9456687680729925
+recall:  0.7979631117105921
+F1:  0.8655597566989973
+
+results/disfluency_su_ftokens_lstm150_dropout0.25,0.25_seed8191_0.7811_0.7436_16.h5_train
+precision:  0.9421427388640503
+recall:  0.8622827091826682
+F1:  0.900445506555989
+
+results/disfluency_su_ftokens_lstm150_dropout0.25_seed8191_0.7514_0.7228_8.h5_train
+precision:  0.9584004154764996
+recall:  0.8390342967127896
+F1:  0.8947538546077511
+
+results/disfluency_su_ftokens_lstm256,256,256_dropout0.25,0.25_seed8191_0.7986_0.7713_8.h5_train
+precision:  0.9503392812264388
+recall:  0.8596305108891684
+F1:  0.9027119075659675
+
+results/disfluency_su_ftokens_lstm256,256,256_dropout0.25_seed8191_0.7858_0.7565_7.h5_train
+precision:  0.9576853408182249
+recall:  0.8894109088704666
+F1:  0.9222863069887318
+
+results/disfluency_su_ftokens_lstm256,256_dropout0.25,0.25_seed8191_0.7945_0.7682_7.h5_train
+precision:  0.9405081560045647
+recall:  0.849355136929209
+F1:  0.8926105549848294
+
+results/disfluency_su_ftokens_lstm256,256_dropout0.25,0.5_seed8191_0.8021_0.7849_13.h5_train
+precision:  0.9394204447899963
+recall:  0.8789688253034873
+F1:  0.9081897901659881
+
+results/disfluency_su_ftokens_lstm256,256_dropout0.25_seed8191_0.7728_0.7550_11.h5_train
+precision:  0.9673606426687925
+recall:  0.9562917721231227
+F1:  0.9617943617532067
+
+results/disfluency_su_ftokens_lstm256,256_dropout0.5,0.25_seed8191_0.8020_0.7831_24.h5_train
+precision:  0.9313532106352803
+recall:  0.865859388024188
+F1:  0.897412940012252
+
+results/disfluency_su_ftokens_lstm256,256_dropout0.5,0.5_seed8191_0.8083_0.7830_16.h5_train
+precision:  0.8971281966399073
+recall:  0.8214237000439507
+F1:  0.8576085064637098
+
+results/disfluency_su_ftokens_lstm256,256_dropout0.5_seed8191_0.7809_0.7589_9.h5_train
+precision:  0.9598772089936115
+recall:  0.8766955124804874
+F1:  0.9164026360813635
+
+results/disfluency_su_ftokens_lstm256_dropout0.25,0.25_seed8191_0.7791_0.7485_14.h5_train
+precision:  0.9595655779017023
+recall:  0.8944728187563463
+F1:  0.9258765393364184
+
+results/disfluency_su_ftokens_lstm256_dropout0.25_seed8191_0.7605_0.7305_8.h5_train
+precision:  0.9650192711128458
+recall:  0.8993225527787461
+F1:  0.9310133831212639
+
+results/disfluency_su_ftokens_train
+

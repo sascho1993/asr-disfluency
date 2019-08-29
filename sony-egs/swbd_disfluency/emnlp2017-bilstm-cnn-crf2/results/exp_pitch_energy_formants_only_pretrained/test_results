@@ -1,0 +1,150 @@
+==================================================================================================
+results/exp_pitch_energy_formants_only_pretrained/disfluency_prosody_fNone_lstm200,200,200,200_dropout0.25,0.5_mb32_seed6257_0.4408_0.4423_26.h5_test
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1693
+fn:  2975
+fp:  964
+precision:  0.6371847948814452
+recall:  0.3626820908311911
+F1:  0.46225255972696244
+==================================================================================================
+results/exp_pitch_energy_formants_only_pretrained/disfluency_prosody_fNone_lstm200,200,200,200_dropout0.25,0.5_mb32_seed6571_0.4239_0.4316_20.h5_test
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1584
+fn:  3084
+fp:  832
+precision:  0.6556291390728477
+recall:  0.3393316195372751
+F1:  0.44720496894409945
+==================================================================================================
+results/exp_pitch_energy_formants_only_pretrained/disfluency_prosody_fNone_lstm200,200,200,200_dropout0.25,0.5_mb32_seed7013_0.4255_0.4313_16.h5_test
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1539
+fn:  3129
+fp:  705
+precision:  0.6858288770053476
+recall:  0.3296915167095116
+F1:  0.4453125
+==================================================================================================
+results/exp_pitch_energy_formants_only_pretrained/disfluency_prosody_fNone_lstm200,200,200,200_dropout0.25,0.5_mb32_seed7039_0.3990_0.4035_8.h5_test
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1396
+fn:  3272
+fp:  590
+precision:  0.702920443101712
+recall:  0.299057412167952
+F1:  0.4195972347460174
+==================================================================================================
+results/exp_pitch_energy_formants_only_pretrained/disfluency_prosody_fNone_lstm200,200,200,200_dropout0.25,0.5_mb32_seed7333_0.4347_0.4326_21.h5_test
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1566
+fn:  3102
+fp:  778
+precision:  0.6680887372013652
+recall:  0.33547557840616965
+F1:  0.4466628636622932
+==================================================================================================
+results/exp_pitch_energy_formants_only_pretrained/disfluency_prosody_fNone_lstm200,200,200,200_dropout0.25,0.5_mb32_seed7577_0.4079_0.4216_17.h5_test
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1475
+fn:  3193
+fp:  605
+precision:  0.7091346153846154
+recall:  0.31598114824335904
+F1:  0.4371665678719621
+==================================================================================================
+results/exp_pitch_energy_formants_only_pretrained/disfluency_prosody_fNone_lstm200,200,200,200_dropout0.25,0.5_mb32_seed7687_0.4350_0.4258_18.h5_test
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1584
+fn:  3084
+fp:  811
+precision:  0.6613778705636744
+recall:  0.3393316195372751
+F1:  0.44853461701826425
+==================================================================================================
+results/exp_pitch_energy_formants_only_pretrained/disfluency_prosody_fNone_lstm200,200,200,200_dropout0.25,0.5_mb32_seed8191_0.4374_0.4253_27.h5_test
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1509
+fn:  3159
+fp:  726
+precision:  0.6751677852348993
+recall:  0.3232647814910026
+F1:  0.4372012168622338
+==================================================================================================
+results/exp_pitch_energy_formants_only_pretrained/disfluency_prosody_fNone_lstm200,200,200,200_dropout0.25,0.5_mb32_seed8423_0.4046_0.3944_8.h5_test
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1364
+fn:  3304
+fp:  624
+precision:  0.6861167002012073
+recall:  0.29220222793487577
+F1:  0.4098557692307693
+==================================================================================================
+results/exp_pitch_energy_formants_only_pretrained/disfluency_prosody_fNone_lstm200,200,200,200_dropout0.25,0.5_mb32_seed8707_0.4493_0.4374_21.h5_test
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1638
+fn:  3030
+fp:  912
+precision:  0.6423529411764706
+recall:  0.3508997429305913
+F1:  0.4538653366583541
+==================================================================================================
+results/exp_pitch_energy_formants_only_pretrained/disfluency_prosody_fNone_lstm200,200,200,200_dropout0.25,0.5_mb32_seed8933_0.4235_0.4335_10.h5_test
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1489
+fn:  3179
+fp:  665
+precision:  0.6912720519962859
+recall:  0.3189802913453299
+F1:  0.43652887716212246
+==================================================================================================
+results/exp_pitch_energy_formants_only_pretrained/disfluency_prosody_fNone_lstm200,200,200,200_dropout0.25,0.5_mb32_seed9661_0.4385_0.4331_18.h5_test
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1567
+fn:  3101
+fp:  800
+precision:  0.6620194338825518
+recall:  0.3356898029134533
+F1:  0.44548685145700073
+==================================================================================================
+results/exp_pitch_energy_formants_only_pretrained/disfluency_prosody_fNone_lstm200,200,200,200_dropout0.25,0.5_mb32_seed9739_0.4129_0.4233_13.h5_test
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1506
+fn:  3162
+fp:  698
+precision:  0.6833030852994555
+recall:  0.3226221079691517
+F1:  0.43830034924330613
+==================================================================================================
+results/exp_pitch_energy_formants_only_pretrained/disfluency_prosody_fNone_lstm200,200,200,200_dropout0.25,0.5_mb32_seed9907_0.4286_0.4341_15.h5_test
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1567
+fn:  3101
+fp:  732
+precision:  0.6816006959547629
+recall:  0.3356898029134533
+F1:  0.44983493612745806
+==================================================================================================
+results/exp_pitch_energy_formants_only_pretrained/disfluency_prosody_fNone_lstm200,200,200,200_dropout0.25,0.5_mb32_seed9973_0.4240_0.4312_12.h5_test
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1599
+fn:  3069
+fp:  856
+precision:  0.6513238289205703
+recall:  0.3425449871465296
+F1:  0.4489681314053068

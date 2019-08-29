@@ -1,0 +1,150 @@
+==================================================================================================
+results/exp_fluent_dur_word_dur_word_only/disfluency_duration_fluent_only_fword_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed6257_0.0565_0.0524_3.h5_dev
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  149
+fn:  5807
+fp:  27
+precision:  0.8465909090909091
+recall:  0.025016789791806583
+F1:  0.04859752120026093
+==================================================================================================
+results/exp_fluent_dur_word_dur_word_only/disfluency_duration_fluent_only_fword_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed6571_0.0722_0.0706_8.h5_dev
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  192
+fn:  5764
+fp:  26
+precision:  0.8807339449541285
+recall:  0.03223640026863667
+F1:  0.06219630709426628
+==================================================================================================
+results/exp_fluent_dur_word_dur_word_only/disfluency_duration_fluent_only_fword_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed7013_0.0983_0.0829_5.h5_dev
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  266
+fn:  5690
+fp:  42
+precision:  0.8636363636363636
+recall:  0.04466084620550705
+F1:  0.08492975734355045
+==================================================================================================
+results/exp_fluent_dur_word_dur_word_only/disfluency_duration_fluent_only_fword_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed7039_0.0469_0.0355_2.h5_dev
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  123
+fn:  5833
+fp:  16
+precision:  0.8848920863309353
+recall:  0.020651443922095367
+F1:  0.04036095159967186
+==================================================================================================
+results/exp_fluent_dur_word_dur_word_only/disfluency_duration_fluent_only_fword_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed7333_0.0495_0.0494_2.h5_dev
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  130
+fn:  5826
+fp:  22
+precision:  0.8552631578947368
+recall:  0.02182672934855608
+F1:  0.042567125081859856
+==================================================================================================
+results/exp_fluent_dur_word_dur_word_only/disfluency_duration_fluent_only_fword_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed7577_0.0503_0.0520_4.h5_dev
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  134
+fn:  5822
+fp:  17
+precision:  0.8874172185430463
+recall:  0.02249832102081934
+F1:  0.04388406746356639
+==================================================================================================
+results/exp_fluent_dur_word_dur_word_only/disfluency_duration_fluent_only_fword_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed7687_0.0715_0.0627_2.h5_dev
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  191
+fn:  5765
+fp:  47
+precision:  0.8025210084033614
+recall:  0.032068502350570856
+F1:  0.061672586373910245
+==================================================================================================
+results/exp_fluent_dur_word_dur_word_only/disfluency_duration_fluent_only_fword_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed8191_0.0722_0.0587_6.h5_dev
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  192
+fn:  5764
+fp:  23
+precision:  0.8930232558139535
+recall:  0.03223640026863667
+F1:  0.06222654350996597
+==================================================================================================
+results/exp_fluent_dur_word_dur_word_only/disfluency_duration_fluent_only_fword_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed8423_0.0477_0.0409_4.h5_dev
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  125
+fn:  5831
+fp:  18
+precision:  0.8741258741258742
+recall:  0.020987239758226996
+F1:  0.0409903262829972
+==================================================================================================
+results/exp_fluent_dur_word_dur_word_only/disfluency_duration_fluent_only_fword_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed8707_0.0942_0.0816_9.h5_dev
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  255
+fn:  5701
+fp:  38
+precision:  0.8703071672354948
+recall:  0.042813969106783076
+F1:  0.0816130580892943
+==================================================================================================
+results/exp_fluent_dur_word_dur_word_only/disfluency_duration_fluent_only_fword_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed8933_0.0945_0.0802_3.h5_dev
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  256
+fn:  5700
+fp:  58
+precision:  0.8152866242038217
+recall:  0.042981867024848894
+F1:  0.08165869218500797
+==================================================================================================
+results/exp_fluent_dur_word_dur_word_only/disfluency_duration_fluent_only_fword_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed9661_0.1259_0.1215_5.h5_dev
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  350
+fn:  5606
+fp:  105
+precision:  0.7692307692307693
+recall:  0.05876427132303559
+F1:  0.10918733426922475
+==================================================================================================
+results/exp_fluent_dur_word_dur_word_only/disfluency_duration_fluent_only_fword_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed9739_0.0616_0.0558_4.h5_dev
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  163
+fn:  5793
+fp:  24
+precision:  0.8716577540106952
+recall:  0.027367360644728004
+F1:  0.05306853328992349
+==================================================================================================
+results/exp_fluent_dur_word_dur_word_only/disfluency_duration_fluent_only_fword_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed9907_0.0609_0.0480_2.h5_dev
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  161
+fn:  5795
+fp:  23
+precision:  0.875
+recall:  0.027031564808596375
+F1:  0.052442996742671014
+==================================================================================================
+results/exp_fluent_dur_word_dur_word_only/disfluency_duration_fluent_only_fword_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed9973_0.0718_0.0634_4.h5_dev
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  191
+fn:  5765
+fp:  27
+precision:  0.8761467889908257
+recall:  0.032068502350570856
+F1:  0.06187236799481697

@@ -1,0 +1,152 @@
+results/disfluency_su_ftokens_dev
+
+results/disfluency_su_ftokens_lstm1014,1024_dropout0.25,0.25_seed8191_0.7907_0.7653_7.h5_dev
+precision:  0.8716425005942476
+recall:  0.7271465397580805
+F1:  0.7928648648648648
+
+results/disfluency_su_ftokens_lstm1014,1024_dropout0.25_seed8191_0.7823_0.7512_3.h5_dev
+precision:  0.8939929328621908
+recall:  0.7023597065238945
+F1:  0.7866740699611326
+
+results/disfluency_su_ftokens_lstm1014_dropout0.25_seed8191_0.7535_0.7279_8.h5_dev
+precision:  0.8612862547288777
+recall:  0.6771762839579615
+F1:  0.758214920071048
+
+results/disfluency_su_ftokens_lstm1024_dropout0.25,0.25_seed8191_0.7786_0.7394_8.h5_dev
+precision:  0.870548604427334
+recall:  0.7174301011302796
+F1:  0.7866072399173824
+
+results/disfluency_su_ftokens_lstm150,150,150,150_dropout0.25,0.25_seed8191_0.8064_0.7847_12.h5_dev
+precision:  0.8727770177838577
+recall:  0.7590719809637121
+F1:  0.8119630925867006
+
+results/disfluency_su_ftokens_lstm150,150,150,150_dropout0.25_seed8191_0.7902_0.7681_8.h5_dev
+precision:  0.8854869816779171
+recall:  0.7283363077533215
+F1:  0.7992601457947992
+
+results/disfluency_su_ftokens_lstm150,150,150_dropout0.25,0.25_seed8191_0.8048_0.7739_12.h5_dev
+precision:  0.8930862437633642
+recall:  0.7453896490184414
+F1:  0.8125810635538262
+
+results/disfluency_su_ftokens_lstm150,150,150_dropout0.25,0.5_seed8191_0.8095_0.7862_19.h5_dev
+precision:  0.8820678513731826
+recall:  0.7578822129684711
+F1:  0.8152730375426621
+
+results/disfluency_su_ftokens_lstm150,150,150_dropout0.25_seed8191_0.7856_0.7631_7.h5_dev
+precision:  0.8986828774062816
+recall:  0.7035494745191354
+F1:  0.789233678122567
+
+results/disfluency_su_ftokens_lstm150,150,150_dropout0.5,0.25_seed8191_0.8071_0.7876_22.h5_dev
+precision:  0.8829935125115848
+recall:  0.7557009716438627
+F1:  0.814403248210279
+
+results/disfluency_su_ftokens_lstm150,150,150_dropout0.5,0.5_seed8191_0.8058_0.7809_14.h5_dev
+precision:  0.8932154801720019
+recall:  0.7414237557009716
+F1:  0.8102719687940189
+
+results/disfluency_su_ftokens_lstm150,150,150_dropout0.5_seed8191_0.7841_0.7556_8.h5_dev
+precision:  0.8747300215982722
+recall:  0.7227840571088637
+F1:  0.7915309446254072
+
+results/disfluency_su_ftokens_lstm150,150_dropout0.25,0.25_seed8191_0.8017_0.7741_14.h5_dev
+precision:  0.8662593346911066
+recall:  0.7590719809637121
+F1:  0.8091312618896639
+
+results/disfluency_su_ftokens_lstm150,150_dropout0.25,0.5_seed8191_0.8064_0.7821_12.h5_dev
+precision:  0.895952380952381
+recall:  0.7461828276819353
+F1:  0.8142378015795738
+
+results/disfluency_su_ftokens_lstm150,150_dropout0.25_seed8191_0.7721_0.7352_12.h5_dev
+precision:  0.8912144702842377
+recall:  0.6839183025976602
+F1:  0.7739257264669583
+
+results/disfluency_su_ftokens_lstm150,150_dropout0.5,0.25_seed8191_0.8011_0.7766_14.h5_dev
+precision:  0.8646327683615819
+recall:  0.7586753916319651
+F1:  0.8081960287283481
+
+results/disfluency_su_ftokens_lstm150,150_dropout0.5,0.5_seed8191_0.8019_0.7807_24.h5_dev
+precision:  0.8927973199329984
+recall:  0.7398373983739838
+F1:  0.809152027759705
+
+results/disfluency_su_ftokens_lstm150,150_dropout0.5_seed8191_0.7763_0.7542_8.h5_dev
+precision:  0.8994297563504406
+recall:  0.6880824905810033
+F1:  0.7796876755420739
+
+results/disfluency_su_ftokens_lstm150_dropout0.25,0.25_seed8191_0.7811_0.7436_16.h5_dev
+precision:  0.8776206728425159
+recall:  0.7138607971445569
+F1:  0.7873154729360307
+
+results/disfluency_su_ftokens_lstm150_dropout0.25_seed8191_0.7514_0.7228_8.h5_dev
+precision:  0.8817317845828934
+recall:  0.66230418401745
+F1:  0.7564262257954932
+
+results/disfluency_su_ftokens_lstm256,256,256_dropout0.25,0.25_seed8191_0.7986_0.7713_8.h5_dev
+precision:  0.9012864918357248
+recall:  0.7223874677771168
+F1:  0.801981287837094
+
+results/disfluency_su_ftokens_lstm256,256,256_dropout0.25_seed8191_0.7858_0.7565_7.h5_dev
+precision:  0.8861908265881776
+recall:  0.7164386278009122
+F1:  0.7923245614035087
+
+results/disfluency_su_ftokens_lstm256,256_dropout0.25,0.25_seed8191_0.7945_0.7682_7.h5_dev
+precision:  0.8993354664041349
+recall:  0.7245687091017252
+F1:  0.802547770700637
+
+results/disfluency_su_ftokens_lstm256,256_dropout0.25,0.5_seed8191_0.8021_0.7849_13.h5_dev
+precision:  0.88164987110382
+recall:  0.7459845330160618
+F1:  0.8081632653061224
+
+results/disfluency_su_ftokens_lstm256,256_dropout0.25_seed8191_0.7728_0.7550_11.h5_dev
+precision:  0.8427251732101617
+recall:  0.7235772357723578
+F1:  0.7786194388136136
+
+results/disfluency_su_ftokens_lstm256,256_dropout0.5,0.25_seed8191_0.8020_0.7831_24.h5_dev
+precision:  0.8863528292914884
+recall:  0.7392425143763632
+F1:  0.8061412044545357
+
+results/disfluency_su_ftokens_lstm256,256_dropout0.5,0.5_seed8191_0.8083_0.7830_16.h5_dev
+precision:  0.8883666274970623
+recall:  0.7495538370017847
+F1:  0.8130780813078082
+
+results/disfluency_su_ftokens_lstm256,256_dropout0.5_seed8191_0.7809_0.7589_9.h5_dev
+precision:  0.8929019312766491
+recall:  0.7059290105096173
+F1:  0.7884828349944629
+
+results/disfluency_su_ftokens_lstm256_dropout0.25,0.25_seed8191_0.7791_0.7485_14.h5_dev
+precision:  0.8808161234137846
+recall:  0.7019631171921475
+F1:  0.7812844846612228
+
+results/disfluency_su_ftokens_lstm256_dropout0.25_seed8191_0.7605_0.7305_8.h5_dev
+precision:  0.8763701249044099
+recall:  0.6817370612730518
+F1:  0.7668971670756191
+

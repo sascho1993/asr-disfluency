@@ -1,0 +1,17 @@
+==================================================================================================
+results/exp_pitch_energy_formants_only_lstm50/disfluency_prosody_fNone_lstm200,200,200,200_dropout0.25,0.5_mb32_prosodyLSTM50_seed8191_0.4292_0.4295_44.h5_dev
+==================================================================================================
+complex disfluencies only
+tp:  1692
+fn:  3440
+fp:  1083
+precision:  0.6097297297297297
+recall:  0.32969602494154326
+F1:  0.4279752118376122
+General Evaluation with all disfluency types
+tp:  2057
+fn:  3899
+fp:  1083
+precision:  0.6550955414012739
+recall:  0.34536601746138346
+F1:  0.45228671943711524

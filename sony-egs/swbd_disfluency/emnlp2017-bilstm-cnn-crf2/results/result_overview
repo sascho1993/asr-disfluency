@@ -1,0 +1,68 @@
+exp_b							test
+exp_c							test
+exp_d							test
+exp_energy_only_pretrained				test	dev	
+exp_energy_pretrained					test	dev
+exp_fluent_duration					test	dev
+exp_fluent_duration_only				test	dev
+exp_fluent_dur_word_dur_only				test	dev
+exp_fluent_dur_word_dur_phone_only			test	dev
+exp_fluent_dur_word_dur_word_only			test	dev
+exp_fluent_word_dur_word_pause				r
+exp_fluent_word_dur_word_pause_only			test	dev
+exp_formants_only_pretrained				test	dev
+exp_formants_pretrained					test	dev
+exp_kaldi_17_1.0					test	dev	kaldi_dev
+exp_kaldi_17_1.0_prosody_only_pretrained				kaldi_dev
+exp_kaldi_17_1.0_prosody_pretrained					kaldi_dev
+exp_kaldi_7_0.0						test	dev	kaldi_dev
+exp_kaldi_7_0.0_prosody_only_pretrained					kaldi_dev
+exp_kaldi_7_0.0_prosody_pretrained					kaldi_dev
+exp_pitch_energy_formants_dur_only_pretrained		test	dev	kaldi_dev
+exp_pitch_energy_formants_dur_pretrained		test	dev	kaldi_dev
+exp_pitch_energy_formants_only_pretrained		test	dev
+exp_pitch_energy_formants_pretrained			test	dev
+exp_pitch_fine_tune					test	dev
+exp_pitch_fine_tune_r2					test	dev
+exp_pitch_fine_tune_r3					test	dev
+exp_pitch_lstm_25					test	dev
+exp_pitch_lstm_tune					test	dev
+exp_pitch_only_cnn					test	dev
+exp_pitch_only_cnn_r2					test	dev
+exp_pitch_only_pretrained				test	dev
+exp_pitch_pretrained					test	dev
+exp_silver						test	dev	kaldi_dev
+
+/speech/dbwork/mul/spielwiese4/students/deschops/asr-disfluency/sony-egs/swbd_disfluency/emnlp2017-bilstm-cnn-crf2/results/kaldi_test/exp_kaldi_17_1.0_prosody_only_pretrained/7_1.0
+
+=================================================================================
+=========== LSTM pretraining ====================================================
+=================================================================================
+exp_energy_only_lstm
+exp_formants_only_lstm
+exp_kaldi_17_1.0_prosody_only_lstm50
+exp_kaldi_7_0.0_prosody_only_lstm50
+exp_pitch_energy_formants_only_lstm25
+exp_pitch_energy_formants_only_lstm50
+exp_pitch_energy_formants_only_lstm75
+exp_pitch_only_lstm
+
+=================================================================================
+=========== not used ============================================================
+=================================================================================
+exp_raw_pitch_cnn_bak
+exp_raw_pitch_lstm
+test_pretrained_pitch
+test_run
+test_seed
+test_small
+unidep_pos
+wrong_phone_dur
+exp_training_loss
+exp_energy_tune
+exp_energy_tune_r2
+exp_pitch_energy_tune
+exp_pitch_energy_tune_r2
+exp_pitch_tune
+exp_pitch_tune_bak
+

@@ -1,0 +1,150 @@
+==================================================================================================
+results/kaldi_test/exp_pitch_energy_formants_dur_only_pretrained/9_1.0/disfluency_prosody_fpause,word_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed6257_0.6060_0.5854_27.h5_dev_9_1.0
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  2045
+fn:  2875
+fp:  1226
+precision:  0.6251910730663406
+recall:  0.41565040650406504
+F1:  0.4993285313148579
+==================================================================================================
+results/kaldi_test/exp_pitch_energy_formants_dur_only_pretrained/9_1.0/disfluency_prosody_fpause,word_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed6571_0.5592_0.5482_7.h5_dev_9_1.0
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1807
+fn:  3113
+fp:  1066
+precision:  0.6289592760180995
+recall:  0.3672764227642276
+F1:  0.4637495187989221
+==================================================================================================
+results/kaldi_test/exp_pitch_energy_formants_dur_only_pretrained/9_1.0/disfluency_prosody_fpause,word_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed7013_0.6016_0.5792_17.h5_dev_9_1.0
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  2059
+fn:  2861
+fp:  1296
+precision:  0.6137108792846497
+recall:  0.4184959349593496
+F1:  0.49764350453172207
+==================================================================================================
+results/kaldi_test/exp_pitch_energy_formants_dur_only_pretrained/9_1.0/disfluency_prosody_fpause,word_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed7039_0.6076_0.5826_31.h5_dev_9_1.0
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1969
+fn:  2951
+fp:  1186
+precision:  0.6240887480190175
+recall:  0.40020325203252033
+F1:  0.48767801857585136
+==================================================================================================
+results/kaldi_test/exp_pitch_energy_formants_dur_only_pretrained/9_1.0/disfluency_prosody_fpause,word_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed7333_0.6078_0.5995_26.h5_dev_9_1.0
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  2055
+fn:  2865
+fp:  1293
+precision:  0.6137992831541219
+recall:  0.4176829268292683
+F1:  0.4970972423802612
+==================================================================================================
+results/kaldi_test/exp_pitch_energy_formants_dur_only_pretrained/9_1.0/disfluency_prosody_fpause,word_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed7577_0.6080_0.5989_36.h5_dev_9_1.0
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  2047
+fn:  2873
+fp:  1255
+precision:  0.6199273167777105
+recall:  0.4160569105691057
+F1:  0.49793237655071754
+==================================================================================================
+results/kaldi_test/exp_pitch_energy_formants_dur_only_pretrained/9_1.0/disfluency_prosody_fpause,word_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed7687_0.5955_0.5950_18.h5_dev_9_1.0
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1995
+fn:  2925
+fp:  1331
+precision:  0.5998196031268791
+recall:  0.4054878048780488
+F1:  0.48387096774193555
+==================================================================================================
+results/kaldi_test/exp_pitch_energy_formants_dur_only_pretrained/9_1.0/disfluency_prosody_fpause,word_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed8191_0.5811_0.5844_14.h5_dev_9_1.0
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1834
+fn:  3086
+fp:  932
+precision:  0.6630513376717281
+recall:  0.3727642276422764
+F1:  0.4772313296903461
+==================================================================================================
+results/kaldi_test/exp_pitch_energy_formants_dur_only_pretrained/9_1.0/disfluency_prosody_fpause,word_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed8423_0.5857_0.5767_14.h5_dev_9_1.0
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1972
+fn:  2948
+fp:  1300
+precision:  0.6026894865525673
+recall:  0.4008130081300813
+F1:  0.48144531250000006
+==================================================================================================
+results/kaldi_test/exp_pitch_energy_formants_dur_only_pretrained/9_1.0/disfluency_prosody_fpause,word_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed8707_0.5983_0.5770_10.h5_dev_9_1.0
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  2012
+fn:  2908
+fp:  1335
+precision:  0.6011353450851509
+recall:  0.4089430894308943
+F1:  0.48675456634813113
+==================================================================================================
+results/kaldi_test/exp_pitch_energy_formants_dur_only_pretrained/9_1.0/disfluency_prosody_fpause,word_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed8933_0.6072_0.6000_27.h5_dev_9_1.0
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  2185
+fn:  2735
+fp:  1579
+precision:  0.5804994686503719
+recall:  0.44410569105691056
+F1:  0.50322432058959
+==================================================================================================
+results/kaldi_test/exp_pitch_energy_formants_dur_only_pretrained/9_1.0/disfluency_prosody_fpause,word_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed9661_0.5669_0.5600_10.h5_dev_9_1.0
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1933
+fn:  2987
+fp:  1115
+precision:  0.6341863517060368
+recall:  0.3928861788617886
+F1:  0.4851907630522088
+==================================================================================================
+results/kaldi_test/exp_pitch_energy_formants_dur_only_pretrained/9_1.0/disfluency_prosody_fpause,word_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed9739_0.5957_0.5838_18.h5_dev_9_1.0
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1990
+fn:  2930
+fp:  1107
+precision:  0.6425573135292219
+recall:  0.40447154471544716
+F1:  0.4964450542596982
+==================================================================================================
+results/kaldi_test/exp_pitch_energy_formants_dur_only_pretrained/9_1.0/disfluency_prosody_fpause,word_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed9907_0.5748_0.5700_8.h5_dev_9_1.0
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  1890
+fn:  3030
+fp:  1143
+precision:  0.6231454005934718
+recall:  0.38414634146341464
+F1:  0.4752923425122595
+==================================================================================================
+results/kaldi_test/exp_pitch_energy_formants_dur_only_pretrained/9_1.0/disfluency_prosody_fpause,word_dur_word_lstm200,200,200,200_dropout0.25,0.5_mb32_seed9973_0.6053_0.5968_20.h5_dev_9_1.0
+==================================================================================================
+General Evaluation with all disfluency types
+tp:  2056
+fn:  2864
+fp:  1189
+precision:  0.6335901386748845
+recall:  0.41788617886178864
+F1:  0.5036129822412738
