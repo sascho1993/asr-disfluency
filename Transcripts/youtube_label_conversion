@@ -1,0 +1,9 @@
+cat youtube-J1iQARN0f7I_label.fr.vtt | awk '{print $3}' | sed 's/00:0/0/g' | tr ":" " " |awk '{ print $1 * 60 , $2}' | awk '{for(i=1;i<=NF;i++){NUM=NUM?NUM+$i:$i};$(NF+1)=NUM;NUM=""} 1' | awk '{print $3}' > youtube-J1iQARN0f7I_times
+
+awk '{for (i=4; i<NF; i++) printf $i " "; print $NF}' youtube-J1iQARN0f7I_label.fr.vtt | tr -d "\.\?,\!\:;\)\(" | tr " " "_" > youtube-J1iQARN0f7I_text 
+
+wc -l youtube-J1iQARN0f7I_text
+for i in {1..60}; do echo "121" >> youtube-J1iQARN0f7I_121 ; done
+
+paste -d " " youtube-J1iQARN0f7I_times youtube-J1iQARN0f7I_121 youtube-J1iQARN0f7I_text > youtube-J1iQARN0f7I_label
+

@@ -1,0 +1,11 @@
+# Checking if servers are free:
+ssh deschops@destc0strapp69
+nvidia-smi
+
+
+# Test the dnn model with nnet3-compute
+# Usage: nnet3-compute [options] <raw-nnet-in> <features-rspecifier> <matrix-wspecifier>
+# dnn model will be in:
+# /speech/dbwork/mul/spielwiese2/deschops/kaldi/egs/sad/exp/dnn-nnet3-sn2-ffbank-fb23d2-dtrain_all_cldfh1000dev_all_cldf-tdnnlstmh520hpr130hpnr130i6spi20000bs12864lri0.0003lre0.00003
+# Example
+nnet3-compute <dnn-model> scp:data/train_all_cldf/fbank-fb23/feats.scp ark:out.ark

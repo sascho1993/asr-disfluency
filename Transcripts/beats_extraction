@@ -1,0 +1,23 @@
+>>> filename = "T0107G0019S0112.wav"
+>>> y, sr = librosa.load(filename)
+>>> tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr)
+>>> beat_times = librosa.frames_to_time(beat_frames, sr=sr)
+>>> librosa.output.times_csv('beat_times.csv', beat_times)
+
+>>> filename = "music.wav"
+>>> y, sr = librosa.load(filename)
+>>> tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr)
+>>> beat_times_music = librosa.frames_to_time(beat_frames, sr=sr)
+>>> librosa.output.times_csv('beat_times_music.csv', beat_times_music)
+
+>>> filename = "speech_music.wav"
+>>> y, sr = librosa.load(filename)
+>>> beat_frames.shape
+(409,)
+>>> beat_frames[:10]
+array([ 10,  31,  54,  76,  99, 121, 144, 166, 189, 211])
+>>> tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr)
+>>> beat_times_ms = librosa.frames_to_time(beat_frames, sr=sr)
+>>> librosa.output.times_csv('beat_times_ms.csv', beat_times_ms)
+>>> librosa.output.times_csv('beat_frames_ms.csv', beat_frames)
+

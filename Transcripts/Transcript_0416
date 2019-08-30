@@ -1,0 +1,6 @@
+# Create pitch feats with text output:
+compute-and-process-kaldi-pitch-feats scp:data/dev_all_cldf/pitch-test/wav.scp ark,t:- > data/dev_all_cldf/pitch-test/pitch.test
+
+# Create pitch feats with binary output:
+compute-and-process-kaldi-pitch-feats scp:data/dev_all_cldf/pitch_test/wav.scp ark:- > data/dev_all_cldf/pitch_test/pitch.ark
+

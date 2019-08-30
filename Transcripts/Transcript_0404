@@ -1,0 +1,29 @@
+Transcript 4.4.18
+
+# sourcing the path
+. path.sh
+
+# gettin the integer vector (sth like contexts)
+# ark:gunzip unzips the zip file
+# pipe | at the end: treat the whole command
+# ,t: text output on screen (instead of binary)
+# more: pagewise output
+# with speecon 2 channels
+copy-int-vector "ark:gunzip -c exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-dict2p/tri4b-dnn-train-dev-alignments/ali.1.gz |" ark,t:- | more
+
+#with speecon 4 channels
+copy-int-vector "ark:gunzip -c /speech/dbwork/mul/spielwiese2/deferram/repo/asr/run/egs/frFR/s5-nnet3/exp/hmm-fmfccldamlltfmllr-ddtk171gpspc_cldf-s11500-g200000-dict2p/tri4b-dnn-train-dev-alignments/ali.1.gz |" ark,t:- | more
+
+ali-to-pdf exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-dict2p/tri4b/final.mdl "ark:gunzip -c exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-dict2p/tri4b-dnn-train-dev-alignments/ali.1.gz |" ark,t:- | more
+
+
+ali-to-phones exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-dict2p/tri4b/final.mdl "ark:gunzip -c exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-dict2p/tri4b-dnn-train-dev-alignments/ali.1.gz |" ark,t:- | more
+
+
+# all phones with their IDs
+less lang/lang-dict2p/phones.txt
+
+# example python file
+vi create-augmented-alignments.py
+
+

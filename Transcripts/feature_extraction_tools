@@ -1,0 +1,18 @@
+Feature extraction
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4676707/
+https://github.com/tyiannak/pyAudioAnalysis/
+spectral features + beat extraction (+ Audio Segmentation)
+
+Not usable:
+It has to be noted that the two tempo-related features are only extracted for whole audio recordings (they are not computed in a short-term basis). Therefore, they can only be added to long-term averages of the mid-term features described in the previous section. For segment-classifiers of general audio classes (e.g. music vs speech) tempo features are not applicable.
+
+
+http://yaafe.sourceforge.net/
+Temporal Shape Statistics
+
+
+https://librosa.github.io/librosa/feature.html#rhythm-features
+tempogram
+
+

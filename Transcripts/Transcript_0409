@@ -1,0 +1,37 @@
+# alignment to phones, one phone per frame
+ali-to-phones --per-frame exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-dict2p/tri4b/final.mdl "ark:gunzip -c exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-dict2p/tri4b-dnn-train-dev-alignments/ali.1.gz |" ark,t:- > sad_data/phones_ali_per_frame
+
+# Translate non-speech phones 1-15, 21-25 to 0
+cat phones_ali_per_frame | sed 's/ [1-9] / 0 /g'|  sed 's/ [1-9] / 0 /g'| sed 's/ [1-2][1-5] / 0 /g' |  sed 's/ [1-2][1-5] / 0 /g' | sed 's/ 10 / 0 /g' | sed 's/ 10 / 0 /g' > phones_ali_per_frame_sil
+
+# Translate speech phones 16-20, 26-175 to 1
+cat phones_ali_per_frame_sil | sed 's/ [1-9][0-9] / 1 /g' | sed 's/ [1-9][0-9] / 1 /g' | sed 's/ 1[0-9][0-9] / 1 /g' | sed 's/ 1[0-9][0-9] / 1 /g' > phones_ali_per_frame_binary
+
+
+
+Create phones_ali_per_frame_binary with duplicated C00:
+use  utils/create-augmented-alignments.py as a basis
+use function in kaldi.py: read_vec_int_ark
+	reads ark into a dictionary
+
+# CODE #
+def read_vec_int_ark(file_or_fd, n_utts=None):
+    """ generator(key,vec) = read_vec_int_ark(file_or_fd)
+   Create generator of (key,vector<int>) tuples, which reads from the ark file/stream.
+   file_or_fd : ark, gzipped ark, pipe or opened file descriptor.
+
+   Read ark to a 'dictionary':
+   d = { u:d for u,d in kaldi_io.read_vec_int_ark(file) }
+  """
+    fd = open_or_fd(file_or_fd)
+    n = 0
+    try:
+        key = read_key(fd)
+        while key and (n_utts==None or (n_utts>0 and n<n_utts)) :
+            ali = read_vec_int(fd)
+            yield key, ali
+            key = read_key(fd)
+            n += 1
+    finally:
+        if fd is not file_or_fd: fd.close()
+

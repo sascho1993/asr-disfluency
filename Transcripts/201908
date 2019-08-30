@@ -1,0 +1,156 @@
+------------------------------------------------------------------------------------------------
+----------- EXPERIMENTS ------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+
+Experiments for pretrained weights:
+    - DONE: exp_pitch_only_lstm (25 units were best)
+    - DONE: exp_energy_only_lstm (25 units, same as was best for pitch)
+    - DONE: exp_formants_only_lstm (25 units, same as was best for pitch)
+    - DONE: exp_pitch_energy_formants_only_lstm25
+    - DONE: exp_pitch_energy_formants_only_lstm50
+        -> Best one on complex score
+        => use 50 units since we are more interested in complex disfluencies
+    - DONE: exp_pitch_energy_formants_only_lstm75
+        -> Best one on normal score
+
+
+
+Experiments where up to 15 models are trained for comparison
+    - silver:
+        - DONE: exp_silver
+    - pitch only CNN (pick a few different (7-8) filters since they make no difference)
+        - DONE: exp_pitch_only_cnn
+        - DONE: exp_pitch_only_cnn_r2
+    - pitch CNN (pick a few different (5) filters since they make no difference)
+        - DONE: exp_pitch_fine_tune
+        - DONE: exp_pitch_fine_tune_r2
+        - DONE: exp_pitch_fine_tune_r3
+    - pitch only LSTM
+        - DONE: exp_pitch_only_pretrained
+    - pitch LSTM (no pretrained weights)
+        - DONE: exp_pitch_lstm_25 (10 experiments)
+    - pitch LSTM
+        - DONE: exp_pitch_pretrained
+    - energy only LSTM
+        - RUNNING: exp_energy_only_pretrained
+    - energy LSTM
+        - DONE: exp_energy_pretrained
+    - formants only LSTM
+        - DONE: exp_formants_only_pretrained
+    - formants LSTM
+        - DONE: exp_formants_pretrained
+    - word duration phone based only
+        - DONE: exp_fluent_dur_word_dur_phone_only
+    - word duration word based only
+        - DONE: exp_word_dur_word_only
+    - word duration only
+        - DONE: exp_fluent_dur_word_dur_only
+    - word duration + pause duration only
+        - DONE: exp_fluent_duration_only
+    - word duration + pause duration
+        - DONE: exp_fluent_duration
+    - frame-based prosodic feats only
+        - DONE: exp_pitch_energy_formants_only_pretrained
+    - frame-based prosodic feats
+        - DONE: exp_pitch_energy_formants_pretrained
+    - all prosodic feats only
+        - RUNNING: exp_pitch_energy_formants_dur_only_pretrained
+    - all prosodic feats
+        - RUNNING: exp_pitch_energy_formants_dur_pretrained
+    
+
+Experiments with F1 = 0:
+    - exp_energy_only_cnn
+    - exp_pause_only
+    - exp_formants_only_cn
+
+------------------------------------------------------------------------------------------------
+----------- KALDI ------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+
+Kaldi on disfluency data:
+  - DONE: get ASR output without word fragments
+    - DONE: change lexicon
+    - DONE: make sure that ASR system runs even with OOVs (changed text)
+    - DONE: nohup sh local/chain/run_tdnn.sh --stage 14 >& tdnn_stage_14.log &
+        -> disfluency_silver_uttids should contain transcript without fragments
+
+Kaldi Disfluency Tags
+  - standardise non-lexical tokens
+    - um-hum, uhhuh, uh-huh
+  - what to do with filt vs. non-filt?
+    - bye-bye / bye bye
+    - cannot / can not
+    - whatever / what ever
+    - cannot / can not
+    - okay / o k
+    - self-satisfaction / self satisfaction
+    - everyone / every one
+    - without / with out
+    - day-to-day / day to day
+    - teenagers / teen agers
+    => use disfluency_silver_uttids_stm.ctm.filt to get more time stamps (second option above)
+       + to be consistent with split of e.g. 'can not'
+       + ASR output is usually not normalised according to original data set, using unnormalised output is closer to real output
+  
+Kaldi data prep:
+  - prepare_kaldi_data.sh: get_duration_model.py loads a dictionary that does not contain some of the words (e.g. acronyms are now c i a instead of c._i._a.)
+  - this leads to empty lines in the resulting files $nn/data/kaldi_test/score.*
+    -> DONE: added stripped version
+
+
+Disfluency system trained on ASR output
+  - assumptions:
+    - lexical part will learn from ASR errors
+      - however, if there are too many errors it might get too much conflicting information and will not be able to find rules that well
+    - prosodic part should be affected by ASR errors too much since the information stays the same, only time stamps change
+  - which systems:
+    - lexical: to see whether lexical component actually improves
+    - lexical + prosodic: to see whether this system works better than exp_pitch_energy_formants
+    - prosodic only: to verify the finding that prosodic systems based on manual labelig work better
+  - decision to make:
+    1) choose one ASR output that performs as expected and train a lexical, a prosodic and a lexical-prosodic system
+      - pro: focus on how prosodic features can best be integrated
+    2) choose a good, an average and a bad ASR output and train only a lexical-prosodic system
+      - pro: focus on how ASR output can be used in training
+    3) choose a good and a bad ASR output and make one mixed dataset (maybe even with more data in total) and train a lexical-prosodic system
+      - pro: focus on how ASR output can be used in training
+      - pro: can 'augmented' data, i.e. more data, help with the task?
+      - con: training time probably increases linearly and I don't have much more time
+        => time factor rules out this option
+        => good for future work
+
+    4) something in between: 
+      - one very good system that has more insertions but less deletions
+      - one very bad system that has more deletions but less insertions
+      -> lexical system
+      -> prosodic system
+      -> lexical-prosodic system
+
+Option 4):
+  - DONE: Data preparation for 7_0.0 and 17_1.0
+  - (DONE): pretrain prosody only
+      -> using pretrained prosody weights from exp_pitch_energy_formants_only
+  - DONE: train 15 systems - lexical, 7_0.0
+  - DONE: train 15 systems - prosody only, 7_0.0
+  - RUNNING: train 15 systems - lexical-prosody, 7_0.0
+  - DONE: train 15 systems - lexical, 17_1.0
+  - DONE: train 15 systems - prosody only, 17_1.0
+  - DONE: train 15 systems - lexical-prosody, 17_1.0
+
+Test systems on Kaldi data:
+  - systems trained on manual data
+    - DONE: exp_silver
+    - TODO: exp_pitch_energy_formants_dur_only_pretrained
+    - TODO: exp_pitch_energy_formants_dur_pretrained
+  - 7_0.0 kaldi system
+    - RUNNING: exp_kaldi_7_0.0
+    - TODO: exp_kaldi_7_0.0_prosody_only_pretrained
+    - TODO: exp_kaldi_7_0.0_prosody_pretrained
+  - 17_1.0 kaldi system
+    - RUNNING: exp_kaldi_17_1.0
+    - TODO: exp_kaldi_17_1.0_prosody_only_pretrained
+    - TODO: exp_kaldi_17_1.0_prosody_pretrained
+
+
+

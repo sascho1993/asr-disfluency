@@ -1,0 +1,129 @@
+May 2019
+
+Talk Thomas + Wilhelm:
+- write a diary (like this) and add information about:
+	- which experiments am I planning to run
+	- what do those experiments look like?
+	- why am I choosing this parameter setting?
+	- what is the expected outcome? what do I want to find out/verify with the experiment?
+	- add paths for all directories/files
+- git commit more often
+	- add tags to point to specific points in git history: 
+	  A tag is like a branch that doesn't change. Unlike branches, tags, after being created,
+	  have no further history of commits.
+- change the evaluation script:
+	- only evaluate the complex structures
+	- the script should act as a kind of disfluency detection system to filter out simple repetitions
+	- then compare the score of this detection system to the NN
+- Get a feeling for hyperparameter:
+	- Try systems without dropout
+	- Instead of early stopping, go back to the plateau and change learning rate to 1/10, then continue training
+- write a shell script to automatically run a set of experiments
+	- the script should call the training script with different parameter settings and successively run a number of experiments
+
+
+Experiment block a1: exploring unit size and number of layers
+- according to Reimers, Gurevych (2017), clip norm always improved results, value is of minor importance, best value: 1
+- set dropout to 0 -> change dropout after to get a feeling for it, results should be rather bad and model should overfit without dropout
+- optimiser: nadam -> best and fastest performance in Reimers2017
+- early stopping: 5
+- mini batch size: 32
+- max number of epochs: 50
+- layers: 100, (100,100), 150, (150,150), 200, (200,200)
+	=> chose more layers since the problem is more complex than the seuqence modelling problems in Reimers, Gurevych 2017
+
+Experiment block a2: adding variational dropout
+- clip norm: 1
+- dropout: variational, 0.25 or 0.5
+- optimiser: nadam
+- early stopping: 5
+- mini batch size: 32
+- max number of epochs: 50
+- layers: 150,150,150; 200,200,200
+- This experiment is done to test the effect of variational dropout on the general performance and on the reduction of overfitting. 
+	=> Variational dropout was shown to be superior to naive dropout. With this assumption, only dropout values are explored
+
+Experiment block a3: adding more layers
+- clip norm: 1
+- dropout: 0
+- optimiser: nadam
+- early stopping: 5
+- mini batch size: 32
+- max number of epochs: 50
+- layers: same as a1 but 4 layers
+- This experiment is an extension of a1 to see if an additional layer improves the results even more
+
+Experiment block a4: nadam vs adam
+- clip norm: 1
+- dropout: 0.25 0.25
+- optimiser: adam
+- early stopping: 5
+- mini batch size: 32
+- max number of epochs: 50
+- layers: 150, 200 x 3, 4
+- This experiment is done to verify whether nadam is the best optimiser
+	=> adam is the better optimiser
+
+Experiment block a5: extension of a4 with different dropout
+- clip norm: 1
+- dropout: 0.25 0.5
+- optimiser: adam
+- early stopping: 5
+- mini batch size: 32
+- max number of epochs: 50
+- layers: 150, 200 x 3, 4
+- Exploration of promising dropout rates
+
+Experiment block a6: exploration of mini batch sizes (smaller)
+- clip norm: 1
+- dropout: 0.25 0.5, 0.25 0.25
+- optimiser: adam
+- early stopping: 5
+- mini batch size: 8, 16
+- max number of epochs: 50
+- layers: 200 x 3, 4
+
+Experiment block a7: exploration of mini batch sizes (smaller)
+- clip norm: 1
+- dropout: 0.25 0.5, 0.25 0.25
+- optimiser: adam
+- early stopping: 5
+- mini batch size: 8, 16
+- max number of epochs: 50
+- layers: 150 x 3, 4
+
+Experiment block a8: exploration of mini batch sizes (larger)
+- clip norm: 1
+- dropout: 0.25 0.5, 0.25 0.25
+- optimiser: adam
+- early stopping: 5
+- mini batch size: 64
+- max number of epochs: 50
+- layers: 150, 200 x 3, 4
+
+
+Dev set analysis (disfluency_su_ftokens_lstm150,150_dropout0.25,0.5_seed8191_0.8064_0.7821_12.h5_dev):
+- 951 disfluent words are a one-word repetition
+	- 33 of these were not classified correctly
+	  all disfluencies	no one-word repetitions
+	  tp:  2845		tp:  3763
+	  fn:  1247		fn:  1280
+	  fp:  437		fp:  437
+- 527 disfluent words are of form BE_IP C but not repetitions
+	- 192 were not correctly classified
+	  tp:  2510
+	  fn:  1055
+	  fp:  437
+
+Dev set analysis (disfluency_su_ftokens_lstm150,150_dropout0.25_seed8191_0.7721_0.7352_12.h5_dev):
+- one-word repetitions
+	- 55 were not classified correctly
+	  tp:  2553		tp:  3449
+	  fn:  1539		fn:  1594
+	  fp:  421		fp:  421
+- BE_IP C but not repetitions
+	- 209 were not correctly classified
+	  tp:  2235
+	  fn:  1330
+	  fp:  421
+

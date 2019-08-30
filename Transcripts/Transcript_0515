@@ -1,0 +1,96 @@
+mkdir ../fbank-fb23_pitch/data_prep
+
+cp spk2utt cmvn.scp reco2file_and_channel segments text utt2dur utt2spk wav.scp ../fbank-fb23_pitch/data_prep/
+
+
+
+UTT2SPK
+
+
+cat feats.scp | awk '{print $1}' > utt2spk_1
+
+
+
+cat feats.scp | awk '{print $1}' | grep "datatang" | sed 's/datatang\_frfr\_//g' | sed 's/\_[SQ][0-9]*-a-000000-[0-9]*//g' > datatang_spk
+
+
+
+
+cat feats.scp | awk '{print $1}' | grep "globalphone" | sed 's/globalphone\_frfr\_//g' | sed 's/\_U[0-9]*-a-000000-[0-9]*//g' > globalphone_spk2
+
+cat globalphone_spk2 | wc -l
+
+for ((i=1;i<=7730;i++)); do echo "GP" >> globalphone_spk1; done
+
+paste -d "" globalphone_spk1 globalphone_spk2 > globalphone_spk
+
+
+
+
+cat feats.scp | awk '{print $1}' | grep "king171" | sed 's/king171\_frfr\_//g' | sed 's/\_U[0-9]*\_C0[01]-a-000000-[0-9]*//g' > king_spk2
+
+cat king_spk2 | wc -l
+
+for ((i=1;i<=101070;i++)); do echo "K171" >> king_spk1; done
+
+paste -d "" king_spk1 king_spk2 > king_spk
+
+
+
+
+cat feats.scp | awk '{print $1}' | grep "speecon" | sed 's/speecon\_frfr\_//g' | sed 's/\_SA[0-9A-Z]*\_C0[0-3]*-a-000000-[0-9]*//g' > speecon_spk2
+
+cat speecon_spk2 | wc -l
+
+for ((i=1;i<=283648;i++)); do echo "SPC" >> speecon_spk1; done
+
+paste -d "" speecon_spk1 speecon_spk2 > speecon_spk
+
+
+
+
+cat datatang_spk globalphone_spk king_spk speecon_spk > spk
+
+paste -d " " utt2spk_1 spk > utt2spk
+
+
+
+
+
+mkdir data_prep/utt2spk_files
+
+mv datatang_spk globalphone_spk* king_spk* speecon_spk* utt2spk_1 data_prep/utt2spk_files/
+
+
+
+RECO
+
+cat utt2spk_1 | sed 's/-000000-[0-9]*//g' > reco1
+
+cat utt2spk_1 | sed 's/-a-000000-[0-9]*//g' > reco2
+
+wc -l reco2
+
+for ((i=1;i<=14637;i++)); do echo "a" >> reco_a; done
+
+paste -d " " reco1 reco2 reco_a > ../../reco2file_and_channel
+
+
+
+
+TEXT
+
+awk 'NR==FNR { a[$1]=$1; next} $1 in a {print $0}' utt2spk_files/utt2spk_1 text > ../text
+
+SEGMENT
+
+awk 'NR==FNR { a[$1]=$1; next} $1 in a {print $0}' utt2spk_files/utt2spk_1 segments >../segments
+
+WAV.SCP
+
+awk 'NR==FNR { a[$1]=$1; next} $1 in a {print $0}' utt2spk_files/reco1 wav.scp > ../wav.scp
+
+RECO
+
+awk 'NR==FNR { a[$1]=$1; next} $1 in a {print $0}' utt2spk_files/reco1 reco2file_and_channel > ../reco2file_and_channel
+

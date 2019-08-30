@@ -1,0 +1,23 @@
+
+Output after train_mono:
+
+steps/diagnostic/analyze_alignments.sh --cmd run.pl lang/lang-bdlex.dict exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-bdlex.dict/mono
+steps/diagnostic/analyze_alignments.sh: see stats in exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-bdlex.dict/mono/log/analyze_alignments.log
+897 warnings in exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-bdlex.dict/mono/log/acc.*.*.log
+10454 warnings in exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-bdlex.dict/mono/log/align.*.*.log
+319 warnings in exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-bdlex.dict/mono/log/update.*.log
+exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-bdlex.dict/mono: nj=4 align prob=-95.14 over 14.52h [retry=0.8%, fail=0.0%] states=138 gauss=980
+
+
+
+steps/diagnostic/analyze_alignments.sh --cmd run.pl lang/lang-bdlex.dict exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-bdlex.dict/tri1
+steps/diagnostic/analyze_alignments.sh: see stats in exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-bdlex.dict/tri1/log/analyze_alignments.log
+2 warnings in exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-bdlex.dict/tri1/log/questions.log
+1 warnings in exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-bdlex.dict/tri1/log/build_tree.log
+2 warnings in exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-bdlex.dict/tri1/log/init_model.log
+34 warnings in exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-bdlex.dict/tri1/log/update.*.log
+615 warnings in exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-bdlex.dict/tri1/log/align.*.*.log
+352 warnings in exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-bdlex.dict/tri1/log/acc.*.*.log
+exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-bdlex.dict/tri1: nj=4 align prob=-92.80 over 43.62h [retry=0.5%, fail=0.0%] states=2497 gauss=30080 tree-impr=3.66
+steps/train_deltas.sh: Done training system with delta+delta-delta features in exp/hmm-fmfccldamlltfmllr-ddtk171gpspc-s11500-g200000-bdlex.dict/tri1
+

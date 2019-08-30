@@ -1,0 +1,116 @@
+Learning Embeddings
+1) Tran et al.
+    - CNN that takes (6 dim.) data of variable length (depending on word duration) as input
+    - They use filters of three different sizes: 3x6, 4x6, 5x6
+    - each filter is used N times
+    - the output of each filter (which is as long as the input, i.e. depends on the word duration) is then maxpooled
+        -> only the maximum value is used
+    - the output vector therefore contains a value from each filter and is of size mxN
+    - the output does not contain information about differences over time!
+2) second idea: getting time differences with a CNN
+    - change the input to the CNN to be of the same length
+        a) zero padding
+        b) blow up/squeeze the values to length k
+            -> interpolation between values or repetition?
+    - output does not require max pooling since dimensionality is the same for each word
+3) third idea: use an LSTM
+    - maybe even the same code as for the disfluency detection system?
+    - more appropriate method for the given data
+=> Combine CNN/LSTM with the BiLSTM-CRF to learn the embeddings
+
+
+Starting 1):
+    - MaxPooling1D(pool_size = m) only takes the max value of a window 1xm
+        -> if we want one value per word, the input must be zero padded to have length m
+    - load_prosodic_data.py stores 3-dimensional prosody vector in pkl files: {train,dev,test}_pitch_feats.pkl
+    - These pkl files have to be loaded in utils/preprocessing.py and the 3-dimensional array has to be added to p['data']['disfluency_silver']
+    - DONE: for sentences of length 1, PADDING_TOKEN is added. One empty prosody vector should therefore be added as well
+    - DONE: utterances of length 0 were discarded for prosodic feature extraction, remove them from ms_silver_word_time_stamps
+    - DONE: a lot of words are of length 0. Investigate where they come from and invent time stamps/ remove utterance
+    	- DONE: invent time stamps: going to, y'all
+    	- DONE: unsure (possibility: end = start_of_next_word): sw4928B_utt_022 (discard), sw4880A_utt_027, sw4821A_utt_009
+    		=> discard 125 utterances
+
+Total amount of utterances:
+  192106
+Discarded utterances because utt<30ms:
+  5
+Discarded utterances because word_dur == 0:
+  125
+
+Silver vs dialogAct:
+    - TODO: dialogAct in numbers
+    - TODO: silver in numbers
+    - TODO: comparison of the two corpora
+
+Pitch features
+    - DONE: Which Kaldi features should be used?
+        -> same as in Tran for same CNN implementation (different ones for optional time sequence implementation)
+    - TODO: is the modulation constant or logarithmic depending on mean F0?
+
+TODO: plot train and validation loss
+    - DONE: print train loss in BiLSTM.py
+    - DONE: print validation loss in BiLSTM.py
+    - DONE: Run one really long experiment and see how the loss behaves (no early stopping) (logs/exp_training_loss.log: 100 epochs with train loss only)
+    - DONE: Adjust early stopping to findings -> early_stopping = 5 is a good choice
+    - DONE: If findings suggest that variance in loss was too high before, run all experiments again -> not necessary
+
+Experiments
+    - exp_silver
+        - basic BiLSTM as tuned for dialogAct data on silver
+        - trained with 15 different seeds
+        - purpose: test how the model behaves when trained on the new data, baseline for prosody-based systems
+        - expectation: similar F1 score as with dialogAct corpus 
+    - exp_pitch_tune
+        - CNN that learn pitch embeddings is added
+        - Filters: 10, 30, 50, 100
+    - exp_pitch_fine_tune
+        - CNN that learn pitch embeddings is added
+        - Filters: 10 - 80 in 5er steps
+        - result: deviation is 1 +- std (as in exp_silver)
+            -> number of filters does not matter
+            -> new exp round 2 and 3: plot all rounds for thesis to show that #filters is not important
+    - exp_energy_tune
+        - CNN that learn energy embeddings is added
+        - Filters: 10, 30, 50, 100
+    - exp_pitch_energy_tune
+        - CNN that learn pitch and energy embeddings is added
+        - Filters: 30, 50, 100, 150, 200
+    - exp_duration_only
+        - see whether duration features have predicitve power
+        - word_dur_phone: relative word duration in relation to mean of all phonemes
+        - word_dur_word: relative word duration in relation to mean length of same words (if #occurrences >= 15)
+        - pause: logarithmic pause measure
+        - DONE: check whether BiLSTM.py was rewritten correctly
+    - exp_pause_only
+        - result: F1 = 0
+        - DONE: Quantitative analysis over RM/RR to see whether pause really has no predictive power
+    - exp_word_dur_phone_only
+        - result: ~2%
+        - TODO: get phone mean duration of only fluent words
+        - TODO: are there other estimations which would make more sense?
+    - exp_word_dur_word_only
+        - result: ~8%
+    - exp_word_dur_only
+        - result: ~33%
+        - TODO: why have word_dur features combined such a big influence but almost none separately?
+            -> probably because feature frequent/infrequent word is implicated
+            -> pattern matching
+        - DONE: Quantitative analysis of durations
+
+TODO: Run Kaldi on Silver data
+    - DONE: Prepare Kaldi files
+    - RUNNING: decode
+        - error during lattice traversal: (solution: run on app64)
+        steps/decode_fmllr.sh --nj 30 --cmd run.pl --config conf/decode.config exp/tri4/graph_sw1_tg data/disfluency_silver exp/tri4/decode_disfluency_silver_sw1_tg
+        steps/decode.sh --scoring-opts  --num-threads 1 --skip-scoring false --acwt 0.083333 --nj 30 --cmd run.pl --beam 8.0 --model exp/tri4/final.alimdl --max-active 2000 exp/tri4/graph_sw1_tg data/disfluency_silver exp/tri4/decode_disfluency_silver_sw1_tg.si
+        decode.sh: feature type is lda
+        steps/diagnostic/analyze_lats.sh --cmd run.pl exp/tri4/graph_sw1_tg exp/tri4/decode_disfluency_silver_sw1_tg.si
+        run.pl: 30 / 30 failed, log is in exp/tri4/decode_disfluency_silver_sw1_tg.si/log/lattice_best_path.*.log
+        data/disfluency_silver/stm does not exist: using local/score_basic.sh
+        run.pl: 13 / 13 failed, log is in exp/tri4/decode_disfluency_silver_sw1_tg.si/scoring/log/best_path.*.0.0.log
+        steps/decode.sh: Error: scoring failed. (ignore by '--skip-scoring true')
+
+
+Duration features:
+    - 
