@@ -1,0 +1,4 @@
+compute-wer --text --mode=present ark:exp/chain/tdnn7q_sp/decode_disfluency_silver_uttids_sw1_tg/scoring/text.filt ark:exp/chain/tdnn7q_sp/decode_disfluency_silver_uttids_sw1_tg/scoring/11.0.0.txt 
+%WER 12.80 [ 193797 / 1513513, 20333 ins, 105774 del, 67690 sub ]
+%SER 53.34 [ 102132 / 191476 ]
+Scored 191476 sentences, 0 not present in hyp.
