@@ -65,13 +65,13 @@ for line in kaldi_output:
     token = token.strip()
     if prev_utt_id != "" and utt_id != prev_utt_id:
         print ""
+        #pass
     # skip [noise] etc.
     if token.strip("[]") == token:
-        start = int(float(start)*100)
-        dur = int(float(dur)*100)
+        start = int(round(float(start)*100))
+        dur = int(round(float(dur)*100))
         if utt_id != prev_utt_id:
             sentence_start = int(utt_start_times[utt_id])
-        #token_start = start - silver[utt_id][1][0]
         token_start = start - sentence_start
         token_end = token_start + dur
         disfluency_tags = silver[utt_id][3][token_start:token_end]
@@ -94,6 +94,8 @@ for line in kaldi_output:
         if token_start == -1:
             token_start = 0
         print utt_id + '\t' + utt_id[0:7] + '\t' + token + '\t' + disfluency_tag + '\t' + str(token_start) + '\t' + str(token_end)
+        #if utt_id == 'sw4940B_utt_069':
+        #    print utt_id + '\t' + token + '\t' + str(sentence_start) + '\t' + str(start)  + '\t' + str(token_start)  + '\t' + str(token_end)  + '\t' + str(dur)
         prev_utt_id  = utt_id
             
 
